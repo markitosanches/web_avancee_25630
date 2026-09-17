@@ -2,7 +2,7 @@
 require_once('classes/CRUD.php');
 
 $crud = new CRUD;
-$clients = $crud->select('client', 'id', 'desc');
+$clients = $crud->select('client', 'name', 'desc');
 
 // echo "<pre>";
 // var_dump($clients);
