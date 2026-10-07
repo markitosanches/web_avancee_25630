@@ -1,0 +1,17 @@
+<?php
+// require_once 'routes/Route.php';
+// require_once 'controllers/HomeController.php';
+use App\Routes\Route;
+use App\Controllers\HomeController;
+
+Route::get('/', 'HomeController@index');
+// Route::get('/home/abc/about', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
+// Route::get('/vistez-cette-page', 'HomeController@abc');
+Route::get('/clients', 'ClientController@index');
+Route::get('/client/show', 'ClientController@show');
+Route::get('/client/create', 'ClientController@create');
+Route::post('/client/create', 'ClientController@store');
+
+
+Route::dispatch();
